@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mouse x y</title>
+  </head>
+  <body>
+    <script>
+      document.addEventListener("mousemove", (event) => {
+        console.log("Cursor Position - X:", event.x, "Y:", event.y, "Alt:", event.altKey
+         );
+        document.getElementById("cursorPosition").innerText = `Cursor Position - X: ${event.clientX}, Y: ${event.clientY} Alt: ${event.altKey}`;
+      });
+    </script>
+
+    <p id="cursorPosition"></p>
+  </body>
+</html>

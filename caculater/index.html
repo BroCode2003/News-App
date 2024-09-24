@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <script src="script.js"></script>
+
+    <!-- Korrigierte ID -->
+    <div id="resultArea"></div>
+
+
+    <table>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td id="delete" onclick="deleteOperation()">DEL</td>
+        </tr>
+      
+        <tr>
+          <td onclick="appendOperation(7)">7</td>
+          <td onclick="appendOperation(8)">8</td>
+          <td onclick="appendOperation(9)">9</td>
+          <td class="highlight" onclick="appendOperation('-')">-</td>
+        </tr>
+      
+        <tr>
+          <td onclick="appendOperation(4)">4</td>
+          <td onclick="appendOperation(5)">5</td>
+          <td onclick="appendOperation(6)">6</td>
+          <td class="highlight" onclick="appendOperation('/')">/</td>
+        </tr>
+      
+        <tr>
+          <td onclick="appendOperation(1)">1</td>
+          <td onclick="appendOperation(2)">2</td>
+          <td onclick="appendOperation(3)">3</td>
+          <td class="highlight" onclick="appendOperation('*')">x</td>
+        </tr>
+      
+        <tr>
+          <td onclick="appendOperation(0)">0</td>
+          <td onclick="appendOperation('.')">,</td>
+          <td id="result" onclick="calculateResult()">=</td>
+          <td class="highlight" onclick="appendOperation('+')">+</td>
+        </tr>
+      </table>
+      
+  </body>
+</html>

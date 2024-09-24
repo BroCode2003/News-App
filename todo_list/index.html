@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo Liste</title>
+    <style>
+        /* Styles für die Todo Liste */
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            padding: 10px;
+            border: 1px solid #ccc;
+            margin-bottom: 5px;
+        }
+
+        /* Style für den Button */
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Style für den Löschen-Button */
+        button.delete {
+            background-color: #f44336;
+        }
+
+        /* Style für den Editieren-Button */
+        button.edit {
+            background-color: #ffeb3b;
+        }
+        
+    </style>
+</head>
+<body>
+    <input type="text" id="input" />
+    <button onclick="addTask()" id="btn">Add Task</button>
+
+    <ul id="taskList"></ul>
+
+    <script>
+        // Referenz zum Eingabefeld
+        let taskInput = document.getElementById("input");
+
+        // Funktion zum Hinzufügen einer Aufgabe
+        function addTask() {
+            let task = taskInput.value.trim();  // trim() entfernt führende und nachfolgende Leerzeichen
+            let list = document.getElementById("taskList");
+
+            if (task === "") {
+                alert("Please enter a task");
+                return;
+            }
+
+            // Erstellen des Listenelements
+            let li = document.createElement("li");
+            li.textContent = task;
+
+            // Hinzufügen des Listenelements zur Liste
+            list.appendChild(li);
+
+            // Leeren des Eingabefeldes
+            taskInput.value = "";
+        }
+    </script>
+</body>
+</html>
