@@ -1,0 +1,74 @@
+/* style.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#search-field {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 15px;
+    width: 80%;
+    max-width: 400px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+#results {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    width: 80%;
+    max-width: 1200px;
+}
+
+.recipe {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.recipe:hover {
+    transform: scale(1.02);
+}
+
+.recipe img {
+    width: 100%;
+    height: auto;
+}
+
+.recipe h2 {
+    margin: 0;
+    padding: 15px;
+    background: #f8f8f8;
+    border-bottom: 1px solid #ddd;
+    font-size: 20px;
+    text-align: center;
+}
+
+.recipe ul {
+    list-style: none;
+    padding: 15px;
+    margin: 0;
+    background: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+}
+
+.recipe ul li {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.recipe p {
+    padding: 15px;
+    font-size: 14px;
+    line-height: 1.6;
+}
