@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const apiKey = '50d10e8fe75846ecb335fdaefac6f6f2';  // Ersetze dies durch deinen Spoonacular-API-Schlüssel
+    const apiKey = 'YOUR_API_KEY';  // Ersetze dies durch deinen Spoonacular-API-Schlüssel
     const searchField = document.getElementById('search-field');
 
     // Funktion zum Holen von Rezeptdaten
